@@ -4773,15 +4773,12 @@ function AttackNoCD()
         end
     end
 end
-local WaRig = game:GetService("ReplicatedStorage").RigControllerEvent:FireServer() or game.ReplicatedStorage.Remotes.Validator:FireServer()
 spawn(function()
     while true do wait(0.1)
         pcall(function()
             if SF015 or FTAK_1x then
                 CSR:Stop()
-                CbFw2.activeController.attacking = false 
-                CbFw2.activeController.timeToNextAttack = tick()
-                CbFw2.activeController.increment = 4
+                CbFw2.activeController.increment = 3
                 CbFw2.activeController.hitboxMagnitude = 60
                 AttackNoCD()
             elseif Auto_Farm == false and FTAK_1x == true then
