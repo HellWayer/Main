@@ -1,1 +1,11 @@
+local RbxAnalyticsService = game:GetService("RbxAnalyticsService"):GetClientId()
+if game:GetService("RbxAnalyticsService"):GetClientId() ~= RbxAnalyticsService then
+	while true do end
+end
 
+setclipboard(tostring(RbxAnalyticsService))
+
+game.StarterGui:SetCore("SendNotification", {
+			Title = "Check Hwid", 
+			Text = ".. tostring(RbxAnalyticsService) ..\nCtrl + v ได้เลย"
+})
