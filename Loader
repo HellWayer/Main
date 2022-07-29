@@ -17,21 +17,13 @@ if game:GetService("RbxAnalyticsService"):GetClientId() ~= RbxAnalyticsService t
 	while true do end
 end
 
-if getgenv().Id == nil or "" then
-	game.Players.LocalPlayer:Kick("\n\nNeed a Key\n")
-end
-
-if getgenv().Key == nil or "" then
-	game.Players.LocalPlayer:Kick("\n\nNeed a Id\n")
-end
-
 --table.find
 if WBcheck_Key then
 	print("( 2 ) Secret Hub [CheckKey] ")
 
 	if getgenv().Key[table.find(getgenv().Key, KeyPasswordDown)] == RbxAnalyticsService then
 		print("( 2 ) Secret Hub [CheckKey] = OK")
-	elseif not getgenv().Key[table.find(getgenv().Key, KeyPasswordDown)] == RbxAnalyticsService or nil then
+	elseif not getgenv().Key[table.find(getgenv().Key, KeyPasswordDown)] == RbxAnalyticsService or nil or "" or '' then
 		game.Players.LocalPlayer:Kick("\n\nWrong Key\n")
 	end
 end
@@ -41,7 +33,7 @@ if WBcheck_Id then
 
 	if getgenv().Id[table.find(getgenv().Id, loadW)] == RbxAnalyticsService then
 		print("( 3 ) Secret Hub [CheckID] OK")
-	elseif not getgenv().Id[table.find(getgenv().Id, loadW)] == RbxAnalyticsService then
+	elseif not getgenv().Id[table.find(getgenv().Id, loadW)] == RbxAnalyticsService or nil or "" or '' then
 		game.Players.LocalPlayer:Kick("\n\nWrong Id\n")
 	end
 end
