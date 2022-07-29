@@ -25,10 +25,6 @@ if getgenv().Key == nil or "" then
 	game.Players.LocalPlayer:Kick("\n\nNeed a Id\n")
 end
 
-if getgenv().Key == nil or "" and getgenv().Id == nil or "" then
-	game.Players.LocalPlayer:Kick("\n\nNeed a Id and Key\n")
-end
-
 --table.find
 if WBcheck_Key then
 	print("( 2 ) Secret Hub [CheckKey] ")
