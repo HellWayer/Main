@@ -1,66 +1,77 @@
-if uiGui_Mori_1 then
-uiGui_Mori_1:Destroy()
-wait(1)
-game.Players.LocalPlayer:Kick("\n\nOh You are Cracker\n")
-local webhookcheck = KRNL_LOADED and "Krnl"
-local url = "https://discord.com/api/webhooks/990600440766943242/wV0RRqCN2CBvx07wLDaaS2QScUt4ydgx7Gbysa200GJZ9lKasPb5Eb43Yloz1FZesMAB"
-local data = {
-   ["embeds"] = {
-       {
-           ["title"] = RbxAnalyticsService,
-           ["description"] = "Username: " .. game.Players.LocalPlayer.Name.." with **"..webhookcheck.."**",
-           ["type"] = "rich",
-           ["color"] = tonumber(0x7269da),
-           ["image"] = {
-               ["url"] = "http://www.roblox.com/Thumbs/Avatar.ashx?x=150&y=150&Format=Png&username=" ..
-                   tostring(game:GetService("Players").LocalPlayer.Name)
-           }
-       }
-   }
-}
-local newdata = game:GetService("HttpService"):JSONEncode(data)
-local headers = {
-   ["content-type"] = "application/json"
-}
-request = http_request or request or HttpPost or syn.request
-local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
-request(abcdef)
-end
+print("( 1 ) Secret Hub [loadstring_Now] ")
+
+local KeyPasswordDown = loadstring(game:HttpGet("https://raw.githubusercontent.com/SecretHell/DataBaseWhilelist/main/KeyDownUp.sql"))
+local whilelistWeb15_85_95 = loadstring(game:HttpGet("https://raw.githubusercontent.com/SecretHell/DataBaseWhilelist/main/WhileList.sql"))
+local blacklsitWeb79_63_548 = loadstring(game:HttpGet("https://raw.githubusercontent.com/SecretHell/DataBaseWhilelist/main/Blacklist.sql"))
+local loadB = blacklsitWeb79_63_548
+local loadW = whilelistWeb15_85_95
+local loadKey = KeyPasswordDown
 local RbxAnalyticsService = game:GetService("RbxAnalyticsService"):GetClientId()
-local uiGui_Mori_1 =  game:GetService("CoreGui"):FindFirstChild("redui")
-if lagwait and game:GetService("RbxAnalyticsService"):GetClientId() ~= RbxAnalyticsService then
-    while true do end
-end
-lagwait = true
-if _G.Key[table.find(_G.Key, RbxAnalyticsService)] == RbxAnalyticsService then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/SecretHell/Main/main/Scripter"))();
-elseif lagwait == true and _G.Key[table.find(_G.Key, RbxAnalyticsService)] == {""} or "" or nil then
-    game.Players.LocalPlayer:Kick("\n\nWrong Key or You Don't Have A Key\n\nYour Key\n"..tostring(RbxAnalyticsService).."\nCopy Key Finished\n")
-    setclipboard(tostring(RbxAnalyticsService))
-    AddKey = true
-end
-if AddKey == true then
-local webhookcheck = KRNL_LOADED and "Krnl"
-local url = "https://discord.com/api/webhooks/990618707099283456/qkqMOAiWQEFfJzm9SFHccTPAnw3ZG1vgsvRRdAhh_sdiAPp-P1yj6YUQhBql4DAPEwt8"
-local data = {
-   ["embeds"] = {
-       {
-           ["title"] = "AddKey:_"..RbxAnalyticsService,
-           ["description"] = "Username: "..game.Players.LocalPlayer.Name.." with **"..webhookcheck.."**",
-           ["type"] = "rich",
-           ["color"] = tonumber(0x7269da),
-           ["image"] = {
-               ["url"] = "http://www.roblox.com/Thumbs/Avatar.ashx?x=150&y=150&Format=Png&username=" ..
-                   tostring(game:GetService("Players").LocalPlayer.Name)
-           }
-       }
-   }
+local Ok = {
+	"(*///*)"
 }
-local newdata = game:GetService("HttpService"):JSONEncode(data)
-local headers = {
-   ["content-type"] = "application/json"
-}
-request = http_request or request or HttpPost or syn.request
-local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
-request(abcdef)
+
+wait(1)
+
+if game:GetService("RbxAnalyticsService"):GetClientId() ~= RbxAnalyticsService then
+	while true do end
 end
+
+if getgenv().Id == nil or "" then
+	game.Players.LocalPlayer:Kick("\n\nNeed a Key\n")
+end
+
+if getgenv().Key == nil or "" then
+	game.Players.LocalPlayer:Kick("\n\nNeed a Id\n")
+end
+
+if getgenv().Key == nil or "" and getgenv().Id == nil or "" then
+	game.Players.LocalPlayer:Kick("\n\nNeed a Id and Key\n")
+end
+
+--table.find
+if WBcheck_Key then
+	print("( 2 ) Secret Hub [CheckKey] ")
+
+	if getgenv().Key[table.find(getgenv().Key, KeyPasswordDown)] == RbxAnalyticsService then
+		print("( 2 ) Secret Hub [CheckKey] = OK")
+	elseif not getgenv().Key[table.find(getgenv().Key, KeyPasswordDown)] == RbxAnalyticsService or nil then
+		game.Players.LocalPlayer:Kick("\n\nWrong Key\n")
+	end
+end
+
+if WBcheck_Id then
+	print("( 3 ) Secret Hub [CheckID] ")
+
+	if getgenv().Id[table.find(getgenv().Id, loadW)] == RbxAnalyticsService then
+		print("( 3 ) Secret Hub [CheckID] OK")
+	elseif not getgenv().Id[table.find(getgenv().Id, loadW)] == RbxAnalyticsService then
+		game.Players.LocalPlayer:Kick("\n\nWrong Id\n")
+	end
+end
+
+if RbxAnalyticsService == loadB then
+	game.Players.LocalPlayer:Kick("\n\nYou are blacklist\nDm Admin\n")
+end
+
+wait(1)
+
+WBcheck_Key = true
+
+wait(1)
+
+WBcheck_Id = true
+
+wait(1)
+if _G.ScriptMode == "Blox Fruit" and WBcheck_Key == true and WBcheck_Id == true then
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/SecretHell/Main/main/Scripter"))();
+else
+	game.Players.LocalPlayer:Kick("\n\nFail Run Script\n")
+end
+
+print("( 4 ) Secret Hub [Run_Script] ")
+
+game.StarterGui:SetCore("SendNotification", {
+	Title = "Check Verify", 
+	Text = "ใช้งานได้เลย"
+})
