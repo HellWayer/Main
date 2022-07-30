@@ -7,5 +7,5 @@ setclipboard(tostring(RbxAnalyticsService))
 
 game.StarterGui:SetCore("SendNotification", {
 			Title = "Check Hwid", 
-			Text = ".. tostring(RbxAnalyticsService) ..\nCtrl + v ได้เลย"
+			Text = .. tostring(RbxAnalyticsService) .."\nCtrl + v ได้เลย"
 })
