@@ -1,7 +1,4 @@
 local RbxAnalyticsService = game:GetService("RbxAnalyticsService"):GetClientId()
-if game:GetService("RbxAnalyticsService"):GetClientId() ~= RbxAnalyticsService then
-	while true do end
-end
 
 setclipboard(tostring(RbxAnalyticsService))
 
