@@ -13,13 +13,12 @@ local Ok = {
 
 wait(1)
 
-if game:GetService("RbxAnalyticsService"):GetClientId() ~= RbxAnalyticsService then
+if getgenv().Id ~= RbxAnalyticsService then
 	while true do end
 end
 
 --table.find
 if WBcheck_Key then
-	print("( 2 ) Secret Hub [CheckKey] ")
 
 	if getgenv().Key[table.find(getgenv().Key, KeyPasswordDown)] == RbxAnalyticsService then
 		print("( 2 ) Secret Hub [CheckKey] = OK")
@@ -44,13 +43,22 @@ end
 
 wait(1)
 
+print("( 2 ) Secret Hub [CheckKey] ")
+
 WBcheck_Key = true
 
+print("( 2 ) Secret Hub [CheckKey] OK")
+
 wait(1)
+
+print("( 3 ) Secret Hub [CheckID]")
 
 WBcheck_Id = true
 
+print("( 3 ) Secret Hub [CheckID] OK")
+
 wait(1)
+
 if _G.ScriptMode == "Blox Fruit" and WBcheck_Key == true and WBcheck_Id == true then
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/SecretHell/Main/main/Scripter"))();
 else
@@ -61,5 +69,5 @@ print("( 4 ) Secret Hub [Run_Script] ")
 
 game.StarterGui:SetCore("SendNotification", {
 	Title = "Check Verify", 
-	Text = "ใช้งานได้เลย"
+	Text = "คุณ".. tostring(getgenv().Id) .."\nใช้งานได้เลย"
 })
