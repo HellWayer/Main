@@ -64,5 +64,5 @@ print("( 6 ) Secret Hub [Run_Script] ")
 
 game.StarterGui:SetCore("SendNotification", {
 	Title = "Check Verify", 
-	Text = "คุณ ".. tostring(getgenv().Id) .."\nใช้งานได้เลย"
+	Text = "คุณ\n".. tostring(getgenv().Id) .."\nใช้งานได้เลย"
 })
