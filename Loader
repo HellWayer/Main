@@ -40,7 +40,11 @@ wait(1)
 
 print("( 2 ) Secret Hub [CheckKey] ")
 
+wait(0.5)
+
 WBcheck_Key = true
+
+wait(0.5)
 
 print("( 3 ) Secret Hub [CheckKey] OK")
 
@@ -48,7 +52,11 @@ wait(1)
 
 print("( 4 ) Secret Hub [CheckID]")
 
+wait(0.5)
+
 WBcheck_Id = true
+
+wait(0.5)
 
 print("( 5 ) Secret Hub [CheckID] OK")
 
