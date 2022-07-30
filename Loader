@@ -13,7 +13,7 @@ local Ok = {
 
 wait(1)
 
-if loadKey ~= getgenv().Key or game:GetService("RbxAnalyticsService"):GetClientId() ~= RbxAnalyticsService then
+if game:GetService("RbxAnalyticsService"):GetClientId() ~= RbxAnalyticsService then
 	while true do end
 end
 
